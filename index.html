@@ -80,7 +80,7 @@
     </section>
 
     <script>
-        // SubTotal:
+        // Total:
 
         var subTotal = parseFloat(document.getElementById("subTotal").innerText);
         var prizePhone = 1219;
@@ -94,22 +94,21 @@
         //button function:
 
         // for phone prize increment:
+
         const phnAdd = document.getElementById("phoneIncrement");
         phnAdd.addEventListener("click", function() {
                 phnQuantity = document.getElementById("phnQuantity").value;
                 const current = parseFloat(phnQuantity);
-                // quantity("phnQuantity", current);
                 quantity("phnQuantity", "phonePrize", current);
 
             })
             // for phone cover increment:
+
         const coverAdd = document.getElementById("coverIncrement");
         coverAdd.addEventListener("click", function() {
             coverQuantity = document.getElementById("coverQuantity").value;
             const current = parseFloat(coverQuantity);
             quantity("coverQuantity", "coverPrize", current);
-
-
         })
 
         function quantity(id1, id2, current) {
@@ -130,8 +129,6 @@
                 toTal = subTotal + tax;
                 document.getElementById("total").innerText = toTal;
 
-
-
             } else {
                 const cur1 = document.getElementById(id2).innerText;
                 const prize = total * 59;
@@ -146,8 +143,6 @@
 
                 toTal = subTotal + tax;
                 document.getElementById("total").innerText = toTal;
-
-
             }
 
 
@@ -222,8 +217,6 @@
 
                     toTal = subTotal + tax;
                     document.getElementById("total").innerText = toTal;
-
-
                 } else {
                     const cur1 = document.getElementById(id2).innerText;
                     const prize = total * 59;
@@ -239,10 +232,8 @@
                     toTal = subTotal + tax;
                     document.getElementById("total").innerText = toTal;
                 }
-
             }
         }
-
         // Prize function:
     </script>
 </body>
